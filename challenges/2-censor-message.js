@@ -25,4 +25,7 @@ function censorMessage(sentence,[scrubbedWords]){
             scrubbedstring += word 
         }
     }
+    return scrubbedstring
 }
+
+console.log(censorMessage("don't mess with cats", ["mess"]) ,"should be don't ***** with cats")
