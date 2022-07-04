@@ -32,7 +32,7 @@ isEqual(0, 1) should be False
 
 function isEqual (a,b){
 
-    if (pairNumbers[0] === pairNumbers[1]){
+    if (a === b){
         return true
     } else {
         return false
