@@ -19,8 +19,11 @@ function censorMessage(sentence,[scrubbedWords]){
     let scrubbedstring = ""
 
     for (let word of splitWords){
-        if (wordCheck(word)){
+        if (word.toLowerCase().includes(scrubbedWords)){
             scrubbedstring += `***** `
+
+
+            
             
         } else {
         
@@ -35,14 +38,3 @@ console.log(censorMessage("don't mess with cats", ["mess"]) ,"should be don't **
 console.log(censorMessage("Are you sure that this is safe", ["are", "is"]), "should be ***** you sure that this ***** safe")
 console.log(censorMessage("I CANNOT HELP YOU", ["can", "not", "help", "you"]), "should be I CANNOT ***** *****")
 
-
-
-function wordCheck(word){
-
-    v = word.toLowerCase()
-
-    if (scrubbedWords.some(v => str.includes(v))) {
-        // There's at least one
-    }
-
-}
