@@ -39,3 +39,10 @@ function isEqual (a,b){
     }
 
 }
+
+
+console.log(isEqual(4, 4), True)
+console.log(isEqual(0, 0), True)
+console.log(isEqual(-4, -4), True)
+console.log(isEqual(4, -4), True)
+console.log(isEqual(0, 1), True)
