@@ -30,6 +30,13 @@ isEqual(0, 1) should be False
 
 */
 
+/**
+ * 
+ * @param {number} a 
+ * @param {number} b 
+ * @returns {boolean} 
+ */
+
 function isEqual (a,b){
 
     if (a === b){

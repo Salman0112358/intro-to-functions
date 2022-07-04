@@ -13,7 +13,13 @@ censorMessage("Are you sure that this is safe", ["are", "is"]) should be "***** 
 censorMessage("I CANNOT HELP YOU", ["can", "not", "help", "you"]) should be "I CANNOT ***** *****"
 */
 
-function censorMessage(sentence,[scrubbedWords]){
+/**
+ * 
+ * @param {string} sentence 
+ * @param {array} scrubbedWords 
+ * @returns {string} 
+ */
+function censorMessage(sentence, scrubbedWords){
 
     const splitWords = sentence.split(" ")
     let scrubbedstring = ""
