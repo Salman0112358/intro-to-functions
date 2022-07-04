@@ -30,7 +30,7 @@ isEqual(0, 1) should be False
 
 */
 
-function isEqual (pairNumbers){
+function isEqual (a,b){
 
     if (pairNumbers[0] === pairNumbers[1]){
         return true
