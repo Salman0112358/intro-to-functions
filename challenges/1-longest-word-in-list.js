@@ -10,4 +10,13 @@ longestInList(["hello", "hi", "greetings", "hey"]) should be "greetings"
 
 function longestInList(stringArray){
 
+    let longestWord = ""
+
+    for (let word of stringArray){
+
+        if (word.length > longestWord.length){
+            longestWord = word
+        }
+    }
+    return longestWord
 }
