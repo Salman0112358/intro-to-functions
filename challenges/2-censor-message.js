@@ -13,6 +13,16 @@ censorMessage("Are you sure that this is safe", ["are", "is"]) should be "***** 
 censorMessage("I CANNOT HELP YOU", ["can", "not", "help", "you"]) should be "I CANNOT ***** *****"
 */
 
-function censorMessage(sentence,[cscrubbedWords]){
+function censorMessage(sentence,[scrubbedWords]){
 
+    const splitWords = sentence.split(" ")
+    let scrubbedstring = ""
+
+    for (let word of splitWords){
+        if (word.toLowerCase().includes(scrubbedWords)){
+            scrubbedstring += "*****"
+        } else {
+            scrubbedstring += word 
+        }
+    }
 }
