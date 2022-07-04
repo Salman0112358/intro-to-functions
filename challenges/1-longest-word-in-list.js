@@ -20,3 +20,5 @@ function longestInList(stringArray){
     }
     return longestWord
 }
+
+console.log(longestInList(["England", "Wales", "Scotland", "Northern Ireland"]), "should be Northern Ireland")
