@@ -12,3 +12,7 @@ censorMessage("don't mess with cats", ["mess"]) should be "don't ***** with cats
 censorMessage("Are you sure that this is safe", ["are", "is"]) should be "***** you sure that this ***** safe"
 censorMessage("I CANNOT HELP YOU", ["can", "not", "help", "you"]) should be "I CANNOT ***** *****"
 */
+
+function censorMessage(sentence,[cscrubbedWords]){
+
+}
