@@ -1,5 +1,3 @@
-
-
 /*
 test cases:
 ===========
@@ -9,23 +7,27 @@ longestInList(["hello", "hi", "greetings", "hey"]) should be "greetings"
 */
 
 /**
- * 
- * @param {Array} stringArray 
- * @returns {string} 
+ *
+ * @param {Array} stringArray
+ * @returns {string}
  */
-function longestInList(stringArray){
+function longestInList(stringArray) {
+  let longestWord = "";
 
-    let longestWord = ""
-
-    for (let word of stringArray){
-
-        if (word.length > longestWord.length){
-            longestWord = word
-        }
+  for (let word of stringArray) {
+    if (word.length > longestWord.length) {
+      longestWord = word;
     }
-    return longestWord
+  }
+  return longestWord;
 }
 
-console.log(longestInList(["England", "Wales", "Scotland", "Northern Ireland"]), "should be Northern Ireland")
-console.log(longestInList(["the", "quick", "brown", "fox"]), "should be quick")
-console.log(longestInList(["hello", "hi", "greetings", "hey"]),  "should be greetings")
+console.log(
+  longestInList(["England", "Wales", "Scotland", "Northern Ireland"]),
+  "should be Northern Ireland"
+);
+console.log(longestInList(["the", "quick", "brown", "fox"]), "should be quick");
+console.log(
+  longestInList(["hello", "hi", "greetings", "hey"]),
+  "should be greetings"
+);
