@@ -17,32 +17,32 @@ censorMessage("I CANNOT HELP YOU", ["can", "not", "help", "you"]) should be "I C
  *
  * @param {string} sentence
  * @param {array} scrubbedWords
- * @returns {string}
+ * @return {string}
  */
 function censorMessage(sentence, scrubbedWords) {
-  const splitWords = sentence.split(" ");
-  let scrubbedstring = "";
+  const splitWords = sentence.split(' ');
+  let scrubbedstring = '';
 
-  for (let word of splitWords) {
+  for (const word of splitWords) {
     if (word.toLowerCase().includes(scrubbedWords)) {
       scrubbedstring += `***** `;
     } else {
       scrubbedstring += `${word} `;
     }
   }
-  //console.log(scrubbedstring)
+  // console.log(scrubbedstring)
   return scrubbedstring;
 }
 
 console.log(
-  censorMessage("don't mess with cats", ["mess"]),
-  "should be don't ***** with cats"
+    censorMessage('don\'t mess with cats', ['mess']),
+    'should be don\'t ***** with cats',
 );
 console.log(
-  censorMessage("Are you sure that this is safe", ["are", "is"]),
-  "should be ***** you sure that this ***** safe"
+    censorMessage('Are you sure that this is safe', ['are', 'is']),
+    'should be ***** you sure that this ***** safe',
 );
 console.log(
-  censorMessage("I CANNOT HELP YOU", ["can", "not", "help", "you"]),
-  "should be I CANNOT ***** *****"
+    censorMessage('I CANNOT HELP YOU', ['can', 'not', 'help', 'you']),
+    'should be I CANNOT ***** *****',
 );
